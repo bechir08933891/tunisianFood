@@ -1,0 +1,521 @@
+/* https://flatuicolors.com/   to pick a flut color */
+/* ************************************************* */
+/* this step is very important general setup */
+/* ************************************************* */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial',sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; /*very important tospeed the typo*/
+  overflow-x: hidden;
+}
+.row{
+  max-width: 1140px;
+  /* make content to center */
+  margin: 0 auto;
+}
+section{
+  padding: 5rem 0;
+}
+h1{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+h2{
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+h2::after{
+  display: block;
+  height: 0.2rem;
+  width: 10rem;
+  background-color: #e67e22;
+  /* always put the content in after pseudoclass */
+  content: "";
+  /* to center it */
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+h3{
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 110%;
+  margin-bottom: 1.5rem;
+}
+.clearfix{zoom: 1}
+.clearfix::after{
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ************************************************* */
+/* HEADER SECTION image */
+/* ************************************************* */
+header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../imgs/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+/* ************************************************* */
+/* header h1 and a tag  */
+/* ************************************************* */
+/* center the content of the header */
+.hero-text-box{
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+}
+.btn:link,
+.btn:visited,
+input[type=submit]{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 200px;
+  /* animation with css3 transition */
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+  background-color: #e67e22;
+  /* to look the same like the other button we add border */
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 1rem;
+}
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]{
+  background-color: #d35400;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+  background-color: #d35400;
+  color: #fff;
+}
+/* ************************************************* */
+/* main navigation */
+/* ************************************************* */
+.logo{
+  width: auto;
+  height: 150px;
+  float: left;
+  margin-top: 1.1rem;
+}
+.main-nav{
+  float: right;
+  list-style: none;
+  margin-top: 4rem;
+}
+.main-nav li{
+  /* to make it side by side  */
+  display: inline-block;
+  margin-left: 2.5rem;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  padding: 0.5rem 0;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+  border-bottom: 2px solid #e67e22;
+}
+
+/* sticky navigation */
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+  color: #555;
+  padding: 0.5rem 0;
+}
+/* ************************************************* */
+/* feature SECTION  */
+/* ************************************************* */
+/* paragraphs */
+.section-feature .long-copy{
+  /* should be between 120 and 145 */
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 3rem;
+}
+.box{
+  padding: 1%;
+  text-align: center;
+}
+.box p{
+  font-size: 90%;
+  line-height: 145%;
+}
+.icon-big{
+  font-size: 350%;
+  display: block;
+  color: #c23616;
+  margin-bottom: 1rem;
+}
+/* ************************************************* */
+/* meal SECTION  */
+/* ************************************************* */
+.section-meal{
+  padding: 0;
+}
+.meal-showcase{
+  list-style: none;
+  width: 100%;
+}
+.meal-showcase li{
+  display: block;
+  float: left;
+  width: 25%;
+}
+.meal-photo{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  /* related to transfrom */
+  overflow: hidden;
+  background-color: #000;
+}
+.meal-photo img{
+  opacity: 0.7;
+  width: 100%;
+  height: 350px;
+  /* scale the img */
+  transform: scale(1.15);
+  /* animate the transform */
+  transition: transform 0.5s, opacity 0.5s;
+}
+.meal-photo img:hover{
+  transform: scale(1.03);
+  opacity: 1;
+}
+.meal-photo .overlay{
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.meal-photo:hover .overlay{
+  opacity: 1;
+}
+/* ************************************************* */
+/* HOW IT WORKS SECTION  */
+/* ************************************************* */
+.section-steps{
+  background-color: #f4f4f4;
+}
+.steps-box:first-child{
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 3rem;
+}
+.steps-box:last-child{
+  padding-left: 3%;
+  margin-top: 70px;
+}
+.app-screen{
+  width: 40%;
+}
+.work-step{
+  margin-bottom: 5rem;
+}
+.work-step:last-of-type{
+  margin-bottom: 80px;
+}
+.work-step div{
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+.btn-app img{
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+/* ************************************************* */
+/* CITIES SECTION  */
+/* ************************************************* */
+.box img{
+  /* make img width equal to box width */
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+}
+.city-feature{
+  margin-bottom: 5px;
+  text-align: left;
+}
+.icon-small{
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+  /* secrets to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+.city-feature a:link, .city-feature a:visited{
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+.city-feature a:hover, .city-feature a:active{
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+/* ************************************************* */
+/* TESTIMONIAL SECTION  */
+/* ************************************************* */
+.section-testi{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../imgs/26.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+blockquote{
+  font-style: italic;
+  line-height: 145%;
+  padding: 2%;
+  position: relative;
+  margin-top: 4rem;
+}
+/* to know all glyph visit https://css-tricks.com/snippets/html/glyphs/ */
+blockquote::before{
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+}
+cite{
+  font-size: 90%;
+  margin-top: 2.5rem;
+  display: block;
+}
+cite img{
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+/* ************************************************* */
+/* PLAN SECTION  */
+/* ************************************************* */
+.section-plans{
+  background-color: #f4f4f4;
+}
+.plan-box{
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  /* box-shadow = x y blur color */
+  box-shadow: 0 2px 2px #efefef;
+}
+.plan-box div{
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+}
+.plan-box div:first-of-type{
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.plan-box div:last-of-type{
+  text-align: center;
+  border: none;
+}
+.plan-box div h3{
+  text-align: center;
+}
+.plan-price{
+  font-size: 400%;
+  font-weight: 100;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: color 0.5s;
+}
+.plan-price:hover{
+  color: #e67e22;
+}
+.plan-price span{
+  font-size: 30%;
+  font-weight: 300;
+}
+.plan-price-meal{
+  font-size: 100%;
+  text-align: center;
+}
+.plan-box ul{
+  list-style: none;
+}
+.plan-box ul li{
+  padding: 10px 0;
+}
+/* ************************************************* */
+/* FORM SECTION  */
+/* ************************************************* */
+.contact-form{
+  width: 60%;
+  margin: 0 auto;
+}
+input[type=text],input[type=email], select, textarea{
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid #e67e22;
+}
+textarea{
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #e67e22;
+}
+input[type=checkbox]{
+  margin: 10px 5px 10px 0;
+}
+*:focus{
+  outline: none;
+}
+/* ************************************************* */
+/* FOOTER SECTION  */
+/* ************************************************* */
+footer{
+  background-color: #333;
+  padding: 40px;
+  font-size: 90%;
+}
+.footer-nav{
+  list-style: none;
+  float: left;
+}
+.social-link{
+  list-style: none;
+  float: right;
+}
+.footer-nav li,
+.social-link li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.footer-nav li:last-child,
+.social-link li:last-child{
+  margin-right: 0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-link li a:link,
+.social-link li a:visited{
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-link li a:hover,
+.social-link li a:active{
+  color: #ddd;
+}
+.social-link li a:link,
+.social-link li a:visited{
+  font-size: 150%;
+}
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram{
+  transition: color 0.2s;
+}
+.ion-social-facebook:hover{
+  color: #3b5998;
+}
+.ion-social-twitter:hover{
+  color: #00aced;
+}
+.ion-social-googleplus:hover{
+  color: #dd4b39;
+}
+.ion-social-instagram:hover{
+  color: #517fa4;
+}
+footer p{
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}

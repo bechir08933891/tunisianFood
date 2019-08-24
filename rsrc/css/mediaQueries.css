@@ -1,0 +1,58 @@
+
+/* for small pc and ipad from 1024px to 1200px */
+@media only screen and (max-width: 1200px) {
+  .hero-text-box{
+    width: 100%;
+    padding: 0 2%;
+  }
+  .row{
+    padding: 0 2%;
+  }
+  .meal-photo img{
+    height: 250px;
+  }
+}
+/* for mobile larger or tablette paysage from 768px to 1023px*/
+@media only screen and (max-width: 1023px) {
+  body{font-size: 18px;}
+  section{padding: 60px 0;}
+  .btn:link,
+  .btn:visited{
+    font-weight: 100;
+    padding: 5px 10px;
+  }
+  .section-feature .long-copy{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .meal-photo img{
+    height: 150px;
+  }
+  .box img{height: 150px}
+  .steps-box{margin-top: 10px;}
+  .steps-box:last-child{margin-top: 10px;}
+  .work-step{margin-bottom: 3rem;}
+  .work-step:last-of-type{margin-bottom: 40px;}
+  .app-screen{width: 50%;}
+  .icon-small{width: 20px;margin-right: 5px}
+  .city-feature{font-size: 90%;}
+  .plan-box{width: 100%;margin-left: 0%;}
+  .plan-price{font-size: 250%;}
+  .contact-form{width: 80%;}
+}
+/* for mobile larger from 481px to 767px portrait tablette*/
+@media only screen and (max-width: 767px) {
+  body{font-size: 16px;}
+  section{padding: 30px 0; text-align: center;}
+  .row, .hero-text-box{padding: 0 4%}
+  .col{width: 100%; margin: 0 0 4% 0;}
+  .main-nav{display: none;}
+  .long-copy{width: 100%; margin-left: 0%;}
+  h1{font-size: 180%}
+  h2{font-size: 150%;}
+}
+/* form mobile 480px */
+@media only screen and (max-width: 480px) {
+  section{padding: 25px 0;}
+  .contact-form{width: 100%;}
+}
